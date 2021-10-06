@@ -2,7 +2,7 @@ const result = document.querySelector('.result')
 
 const fetchData = async()=>{
 	try{
-		const{data} = await axios.get('/api/2-basic-api')
+		const{data} = await axios.get('/.netlify/functions/2-basic-api')
 		const products = data.map(product=>{
 			const{image:{url},name,price} = product
 			return	`<article class="product">
@@ -13,7 +13,7 @@ const fetchData = async()=>{
 					  </div>
     				</article>`
 		}).join('')
-		result.innerhTML = products
+		result.innerHTML = products
 	}catch(error){
 		result.innerHTML = `<h2> There was an error. Please try again latter </h2>`
 	}
