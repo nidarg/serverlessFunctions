@@ -1,0 +1,19 @@
+1. npm install netlify-cli
+2.create netlify.toml file in which you config where the netlify server will find serverless functions
+3. create a folder called functions for ex, and in that folder create js files in which write serverless functions
+4. each serverless function must have name handler --> exports.handler = async(event,context) {
+															return{
+																statusCode:'200',
+																body:'wfwefwff'
+															}
+														}
+														
+!! the return statement is basicaly the http response from netlify server after executing serverless functions 
+
+
+BY DEFAULT the url of the api is domain/.netlify/functions/1-hello(domain is your domain(for ex http://localhost:8888))
+and 1-hello is the name of serverless function BUT you can redirect the url to something more ease to use like /api/serverless-function-name -> see netlify.toml 
+
+// to allow the access to serverless functions from other applications
+// that are not deployed on netlify set headers in sercerless functions as bellow
+// then you can access serverless function by fetching data from -> //domain/.netlify/functions/<function name>
