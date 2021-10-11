@@ -2,7 +2,7 @@ const result = document.querySelector('.result')
 
 const fetchData = async()=>{
     try {
-        const {data} = await axios.get('/api/3-airtable')
+        const {data} = await axios.get('/.netlify/functions/3-airtable')
         const products = data.map((product)=>{
             const{id, name, price, url} = product
             return`
