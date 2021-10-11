@@ -17,3 +17,7 @@ and 1-hello is the name of serverless function BUT you can redirect the url to s
 // to allow the access to serverless functions from other applications
 // that are not deployed on netlify set headers in sercerless functions as bellow
 // then you can access serverless function by fetching data from -> //domain/.netlify/functions/<function name>
+
+!!! AIR TABLE --> don't let empty rows
+
+to consume data from airtable install air-table npm package

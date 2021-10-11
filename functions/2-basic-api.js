@@ -5,9 +5,9 @@ exports.handler = async(event, context)=>{
 		// to allow the access to serverless functions from other applications
 		// that are not deployed on netlify set headers in serverless functions as bellow
 		
-		headers:{
-			'Access-Control-Allow-Origin':'*'
-		},
+		// headers:{
+		// 	'Access-Control-Allow-Origin':'*'
+		// },
 		statusCode:200,
 		body:JSON.stringify(items)
 	}
